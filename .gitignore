@@ -2,6 +2,7 @@ node_modules/
 .venv/
 __pycache__/
 .next/
+.autter/
 dist/
 .env
 .DS_Store

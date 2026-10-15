@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@autter/runtime-next": "^1.5.0",
+    "@autter/runtime-node": "^1.5.0",
     "@next/env": "^15.3.4",
     "next": "^15.3.4",
     "react": "^19.0.0",

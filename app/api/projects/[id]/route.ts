@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
+import { withRuntimeRequest } from "@autter/runtime-next/server";
 import { getProjectForUser } from "../../../../src/projects";
-export async function GET(
+
+export const GET = withRuntimeRequest(async (
   _: Request,
   { params }: { params: Promise<{ id: string }> },
-) {
+) => {
   try {
     const project = getProjectForUser({ orgId: "org_a" }, (await params).id);
     if (!project)
@@ -15,4 +17,4 @@ export async function GET(
       { status: 500 },
     );
   }
-}
+}, { name: "projects.get" });
